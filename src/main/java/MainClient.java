@@ -11,8 +11,7 @@ public class MainClient {
         try (Socket clientSocket = new Socket(host, port);
              PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
              BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream())))
-        {
-            out.println("Netology.ru");
+        {   out.println("Netology.ru");
             String resp = in.readLine();
             System.out.println(resp);
         }
